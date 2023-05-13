@@ -4,11 +4,15 @@
 class TV:
     # constructor
     def __init__(self, channel, volume_level, on):
+        '''Create a TV instance where
+        channel = int(channel of TV)
+        volume_level = int(volume level of TV)
+        on = bool(if the TV is on or not)'''
+
         # instance variables
         self.channel = channel
         self.volume_level = volume_level
         self.on = on
-
-# Create first object of class TV
-
-# Create second object of class TV
+    
+    def get_channel(self):
+        return self.channel
