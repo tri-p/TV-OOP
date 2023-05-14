@@ -29,3 +29,18 @@ if tv2.turn_on() == True:
     print("The TV is on.\n")
 else:
     print("The TV is off.\n")
+
+# Modify instance variables
+# Modify TV 1
+print("TV 1")
+try:
+    tv1.get_channel = int(input("New channel: "))
+    print("New Channel:", tv1.get_channel)
+except ValueError:
+    print("Only integers are allowed.")
+
+try:
+    tv2.get_volume_level = int(input("Set volume level: "))
+    print("Volume level:", tv1.get_volume_level)
+except ValueError:
+    print("Only integers are allowed.")
