@@ -34,13 +34,27 @@ else:
 # Modify TV 1
 print("TV 1")
 try:
-    tv1.get_channel = int(input("New channel: "))
-    print("New Channel:", tv1.get_channel)
+    tv1.get_channel = int(input("Set new channel: "))
+    print("New channel:", tv1.get_channel)
+except ValueError:
+    print("Only integers are allowed.")
+
+try:
+    tv1.get_volume_level = int(input("Set volume level: "))
+    print("Volume level:", tv1.get_volume_level)
+except ValueError:
+    print("Only integers are allowed.")
+
+# Modify TV 2
+print("TV 2")
+try:
+    tv2.get_channel = int(input("Set new channel: "))
+    print("New channel:", tv2.get_channel)
 except ValueError:
     print("Only integers are allowed.")
 
 try:
     tv2.get_volume_level = int(input("Set volume level: "))
-    print("Volume level:", tv1.get_volume_level)
+    print("Volume level:", tv2.get_volume_level)
 except ValueError:
     print("Only integers are allowed.")
