@@ -45,7 +45,7 @@ try:
 except ValueError:
     print("Only integers are allowed.")
 
-channel = input("\nNext channel? (press 'n')\nPrevious channel? (press 'p')\nStay on current channel (press 'c'): ")
+channel = input("\nNext channel? (press 'n')\nPrevious channel? (press 'p')\nStay on current channel? (press 'c'): ")
 if channel == "n":
     channel_up = tv1.get_channel + 1
     channel_up = print("You're currently on channel", channel_up)
@@ -56,7 +56,6 @@ elif channel == "c":
         channel_current = print("You're currently on channel", tv1.get_channel)
 else:
     print("Invalid input.")
-
 
 # Modify TV 2
 print("\nTV 2")
@@ -71,3 +70,15 @@ try:
     print("Volume level:", tv2.get_volume_level)
 except ValueError:
     print("Only integers are allowed.")
+
+channel_tv2 = input("\nNext channel? (press 'n')\nPrevious channel? (press 'p')\nStay on current channel? (press 'c'): ")
+if channel_tv2 == "n":
+    channel_up = tv2.get_channel + 1
+    channel_up = print("You're currently on channel", channel_up)
+elif channel_tv2 == "p":
+    channel_down = tv2.get_channel - 1
+    channel_down = print("You're currently on channel", channel_down)
+elif channel_tv2 == "c":
+        channel_current = print("You're currently on channel", tv2.get_channel)
+else:
+    print("Invalid input.")
