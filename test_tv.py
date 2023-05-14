@@ -57,6 +57,18 @@ elif channel == "c":
 else:
     print("Invalid input.")
 
+volume = input("\nVolume up? (press 'u')\nVlume down? (press 'd')\nStay with current volume? (press 'c'): ")
+if volume == "u":
+    volume_up = tv1.get_volume_level + 1
+    volume_up = print("Your volume level is currently", volume_up)
+elif volume == "d":
+    volume_down = tv1.get_volume_level - 1
+    volume_down = print("Your volume level is currentlyl", volume_down)
+elif volume == "c":
+        volume_current = print("Your volume level is currently", tv1.get_volume_level)
+else:
+    print("Invalid input.")
+
 # Modify TV 2
 print("\nTV 2")
 try:
@@ -80,5 +92,17 @@ elif channel_tv2 == "p":
     channel_down = print("You're currently on channel", channel_down)
 elif channel_tv2 == "c":
         channel_current = print("You're currently on channel", tv2.get_channel)
+else:
+    print("Invalid input.")
+
+volume_tv2 = input("\nVolume up? (press 'u')\nVlume down? (press 'd')\nStay with current volume? (press 'c'): ")
+if volume_tv2 == "u":
+    volume_up = tv1.get_volume_level + 1
+    volume_up = print("Your volume level is currently", volume_up)
+elif volume_tv2 == "d":
+    volume_down = tv1.get_volume_level - 1
+    volume_down = print("Your volume level is currentlyl", volume_down)
+elif volume_tv2 == "c":
+        volume_current = print("Your volume level is currently", tv1.get_volume_level)
 else:
     print("Invalid input.")
