@@ -292,6 +292,9 @@ def on_tv2():
                 inc_volume()
             elif user_input == 6:
                 dec_volume()
+            elif user_input == 7:
+                print("You've turned off the TV.")
+                on_tv()
         except ValueError:
             print("Only integers are allowed.")
     start_tv()
