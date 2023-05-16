@@ -95,8 +95,8 @@ def on_tv1():
         print("The current channel is at " + str(tv1.channel) + ".")
         print("The current volume level is at " + str(tv1.volume_level) + ".")
         print("\n")
-
-        print("\nCurrent channel:", (tv1.channel + 1))
+        tv1.channel = tv1.channel + 1
+        print("Current channel:", tv1.channel)
         print("Current volume level:", tv1.volume_level)
         print("The TV is on.")
         start_tv()
@@ -107,9 +107,33 @@ def on_tv1():
         print("The current channel is at " + str(tv1.channel) + ".")
         print("The current volume level is at " + str(tv1.volume_level) + ".")
         print("\n")
+        tv1.channel = tv1.channel - 1
+        print("Current channel:", tv1.channel)
+        print("Current volume level:", tv1.volume_level)
+        print("The TV is on.")
+        start_tv()
 
-        print("\nCurrent channel:", tv1.channel)
-        print("Current volume level:", (tv1.volume_level + 1))
+    # increase the volume level by 1
+    def inc_volume():
+        print("\n")
+        print("The current channel is at " + str(tv1.channel) + ".")
+        print("The current volume level is at " + str(tv1.volume_level) + ".")
+        print("\n")
+        tv1.volume_level = tv1.volume_level + 1
+        print("Current channel:", tv1.channel)
+        print("Current volume level:", tv1.volume_level)
+        print("The TV is on.")
+        start_tv()
+    
+    # decrease the volume level by 1
+    def dec_volume():
+        print("\n")
+        print("The current channel is at " + str(tv1.channel) + ".")
+        print("The current volume level is at " + str(tv1.volume_level) + ".")
+        print("\n")
+        tv1.volume_level = tv1.volume_level - 1
+        print("Current channel:", tv1.channel)
+        print("Current volume level:", tv1.volume_level)
         print("The TV is on.")
         start_tv()
 
@@ -130,6 +154,12 @@ def on_tv1():
                 set_volumme()
             elif user_input == 3:
                 inc_channel()
+            elif user_input == 4:
+                dec_channel()
+            elif user_input == 5:
+                inc_volume()
+            elif user_input == 6:
+                dec_volume()
             else:
                 print("Invalid input.")
         except ValueError:
