@@ -221,6 +221,30 @@ def on_tv2():
             print("Only integers are allowed.")
         start_tv()
 
+    # increase the channel by 2
+    def inc_channel():
+        print("\n")
+        print("The current channel is at " + str(tv2.channel) + ".")
+        print("The current volume level is at " + str(tv2.volume_level) + ".")
+        print("\n")
+        tv2.channel = tv2.channel + 1
+        print("Current channel:", tv2.channel)
+        print("Current volume level:", tv2.volume_level)
+        print("The TV is on.")
+        start_tv()
+    
+    # decrease the channel by 2
+    def dec_channel():
+        print("\n")
+        print("The current channel is at " + str(tv2.channel) + ".")
+        print("The current volume level is at " + str(tv2.volume_level) + ".")
+        print("\n")
+        tv2.channel = tv2.channel - 1
+        print("Current channel:", tv2.channel)
+        print("Current volume level:", tv2.volume_level)
+        print("The TV is on.")
+        start_tv()
+
     # def start_tv to let the user pick what they would like to do on the TV
     def start_tv():
         try:
@@ -236,6 +260,10 @@ def on_tv2():
                 set_channel()
             elif user_input == 2:
                 set_volumme()
+            elif user_input == 3:
+                inc_channel()
+            elif user_input == 4:
+                dec_channel()
         except ValueError:
             print("Only integers are allowed.")
     start_tv()
