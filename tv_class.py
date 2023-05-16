@@ -16,14 +16,6 @@ class TV:
         self.on = on
         self.off = off
     
-    def get_channel(self):
-        return self.channel
+tv1 = TV(30, 3, True, False)
+tv2 = TV(3, 2, True, False)
 
-    def get_volume_level(self):
-        return self.volume_level
-    
-    def turn_on(self):
-        return self.on
-    
-    def turn_off(self):
-        return self.off
