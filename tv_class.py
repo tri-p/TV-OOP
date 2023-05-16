@@ -199,6 +199,28 @@ def on_tv2():
             print("Only integers are allowed.")
         start_tv()
 
+    # set the volume level
+    def set_volumme():
+        print("\n")
+        print("The current channel is at " + str(tv2.channel) + ".")
+        print("The current volume level is at " + str(tv2.volume_level) + ".")
+        print("\n")
+
+        try:
+            tv2.volume_level = int(input("Change the volume level into: "))
+            tv2.channel = tv2.channel
+            tv2.on = tv2.on
+            tv2.off = tv2.off
+            if tv2.volume_level in range(7):
+                print("\nCurrent channel:", tv2.channel)
+                print("Current volume level:", tv2.volume_level)
+                print("The TV is on.")
+            else:
+                print("Volume level invalid or out of reach.")
+        except ValueError:
+            print("Only integers are allowed.")
+        start_tv()
+
     # def start_tv to let the user pick what they would like to do on the TV
     def start_tv():
         try:
@@ -212,6 +234,8 @@ def on_tv2():
                                     "7. Turn off TV\n\n"))
             if user_input == 1:
                 set_channel()
+            elif user_input == 2:
+                set_volumme()
         except ValueError:
             print("Only integers are allowed.")
     start_tv()
