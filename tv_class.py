@@ -221,7 +221,7 @@ def on_tv2():
             print("Only integers are allowed.")
         start_tv()
 
-    # increase the channel by 2
+    # increase the channel by 1
     def inc_channel():
         print("\n")
         print("The current channel is at " + str(tv2.channel) + ".")
@@ -233,7 +233,7 @@ def on_tv2():
         print("The TV is on.")
         start_tv()
     
-    # decrease the channel by 2
+    # decrease the channel by 1
     def dec_channel():
         print("\n")
         print("The current channel is at " + str(tv2.channel) + ".")
@@ -242,6 +242,30 @@ def on_tv2():
         tv2.channel = tv2.channel - 1
         print("Current channel:", tv2.channel)
         print("Current volume level:", tv2.volume_level)
+        print("The TV is on.")
+        start_tv()
+
+    # increase the volume level by 1
+    def inc_volume():
+        print("\n")
+        print("The current channel is at " + str(tv2.channel) + ".")
+        print("The current volume level is at " + str(tv2.volume_level) + ".")
+        print("\n")
+        tv2.volume_level = tv2.volume_level + 1
+        print("Current channel:", tv2.channel)
+        print("Current volume level:", tv2.volume_level)
+        print("The TV is on.")
+        start_tv()
+    
+    # decrease the volume level by 1
+    def dec_volume():
+        print("\n")
+        print("The current channel is at " + str(tv2.channel) + ".")
+        print("The current volume level is at " + str(tv2.volume_level) + ".")
+        print("\n")
+        tv2.volume_level = tv2.volume_level - 1
+        print("Current channel:", tv2.channel)
+        print("Current volume level:", tv1.volume_level)
         print("The TV is on.")
         start_tv()
 
@@ -264,6 +288,10 @@ def on_tv2():
                 inc_channel()
             elif user_input == 4:
                 dec_channel()
+            elif user_input == 5:
+                inc_volume()
+            elif user_input == 6:
+                dec_volume()
         except ValueError:
             print("Only integers are allowed.")
     start_tv()
