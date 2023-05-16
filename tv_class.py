@@ -160,6 +160,9 @@ def on_tv1():
                 inc_volume()
             elif user_input == 6:
                 dec_volume()
+            elif user_input == 7:
+                print("You've turned off the TV.")
+                on_tv()
             else:
                 print("Invalid input.")
         except ValueError:
