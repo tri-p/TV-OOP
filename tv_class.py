@@ -44,26 +44,49 @@ def on_tv1():
     increase and decrease the channel by 1, 
     increase and decrease the volume level by 1,
     and turn off the TV.'''
-
+    
     # for setting the channel
-    print("\n")
-    print("The current channel is at " + str(tv1.channel) + ".")
-    print("The current volue level is at " + str(tv1.volume_level) + ".")
-    print("\n")
+    def set_channel():
+        print("\n")
+        print("The current channel is at " + str(tv1.channel) + ".")
+        print("The current volue level is at " + str(tv1.volume_level) + ".")
+        print("\n")
 
-    try:
-        tv1.channel = int(input("Change the channel into: "))
-        tv1.volume_level = tv1.volume_level
-        tv1.on = tv1.on
-        tv1.off = tv1.off
-        if tv1.channel in range(120):
-            print("\nCurrent channel:", tv1.channel)
-            print("Current volume level:", tv1.volume_level)
-            print("The TV is on.")
-        else:
-            print("Channel invalid or out of reach.")
-    except ValueError:
-        print("Only integers are allowed.")
+        try:
+            tv1.channel = int(input("Change the channel into: "))
+            tv1.volume_level = tv1.volume_level
+            tv1.on = tv1.on
+            tv1.off = tv1.off
+            if tv1.channel in range(120):
+                print("\nCurrent channel:", tv1.channel)
+                print("Current volume level:", tv1.volume_level)
+                print("The TV is on.")
+            else:
+                print("Channel invalid or out of reach.")
+        except ValueError:
+            print("Only integers are allowed.")
+        start_tv()
+    
+    # def start_tv to let the user pick what they would like to do on the TV
+    def start_tv():
+        try:
+            user_input = int(input("\nWhat would you like to do\n" +
+                                    "1. Set channel\n" +
+                                    "2. Set volume level\n" +
+                                    "3. Increase channel\n" +
+                                    "4. Decrease channel\n" +
+                                    "5. Increase volume level\n" +
+                                    "6. Decerase volume level\n" +
+                                    "7. Turn off TV\n\n"))
+            if user_input == 1:
+                set_channel()
+            else:
+                print("Invalid input.")
+        except ValueError:
+            print("Only integers are allowed.")
+    start_tv()
+        
+        
 
 
 on_tv()
